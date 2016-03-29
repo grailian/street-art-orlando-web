@@ -33,7 +33,18 @@
       }
     })
 
-    .state('admin', {
+    .state('register', {
+      url: '/register/',
+      views: {
+        'content': {
+          templateUrl: 'src/views/Register/Register.html',
+          controller: 'RegisterCtrl',
+          controllerAs: 'RegisterCtrl'
+        }
+      }
+    })
+
+        .state('admin', {
       url: '/admin/',
       views: {
         'header': {
@@ -48,20 +59,6 @@
       resolve: {
         Session: function(Middleware) {
           return Middleware.getSession();
-        }
-      }
-    })
-
-    .state('register', {
-      url: '/register/',
-      views: {
-        'header': {
-          templateUrl: 'views/partials/plain_header.html'
-        },
-        'content': {
-          templateUrl: 'views/register.html',
-          controller: 'RegisterCtrl',
-          controllerAs: 'RegisterCtrl'
         }
       }
     })
