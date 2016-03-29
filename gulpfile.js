@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 var config = {
     rootDir: '.',
     servingPort: 8080,
-    filesToWatch: ['./**/*.{html,css,js}', '!node_modules/**/*.js', '!gulpfile.js']
+    filesToWatch: ['./*.{html,css,js}', './src/**/*.{html,css,js}', '!node_modules/**/*.js', '!./gulpfile.js']
 }
 
 gulp.task('serve', ['connect'], function () {
@@ -13,6 +13,7 @@ gulp.task('serve', ['connect'], function () {
 });
 
 gulp.task('livereload', function() {
+  console.log('reloading')
   gulp.src(config.filesToWatch)
     .pipe(connect.reload());
 });
@@ -21,7 +22,8 @@ gulp.task('connect', function() {
   connect.server({
   	root: config.rootDir,
   	port: config.servingPort,
-    livereload: true
+    livereload: false,
+    fallback: 'index.html'
   });
 });
  
@@ -29,4 +31,4 @@ gulp.task('watch', function () {
   gulp.watch(config.filesToWatch, ['livereload']);
 });
  
-gulp.task('default', ['serve', 'watch']);
+gulp.task('default', ['serve']);

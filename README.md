@@ -1,6 +1,6 @@
 # Code Hangar Base UI Angular 1.x
 
-#### Temporar Fix:
+#### Temporary Fix:
 `index.html` currently lives outside the `src` directory until a proper build/serve is implemented.
 
 ## Directory Structure

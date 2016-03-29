@@ -3,7 +3,7 @@
 
   angular
     .module('codehangar', [
-      // 'ui.router',
+      'ui.router',
     ]);
 
   angular
