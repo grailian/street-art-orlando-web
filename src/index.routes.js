@@ -15,8 +15,8 @@
         url: '/',
         views: {
           'content': {
-            templateUrl: 'src/views/Home/Home.html'
-        //     // controller: 'MainCtrl',
+            templateUrl: 'src/views/Home/Home.html',
+            controller: 'HomeCtrl'
         //     // controllerAs: 'MainCtrl'
           }
         }
