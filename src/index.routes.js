@@ -33,6 +33,17 @@
       }
     })
 
+    .state('login', {
+      url: '/login/',
+      views: {
+        'content': {
+          templateUrl: 'src/views/Login/Login.html',
+          controller: 'LoginCtrl',
+          controllerAs: 'LoginCtrl'
+        }
+      }
+    })
+
     .state('register', {
       url: '/register/',
       views: {
@@ -73,20 +84,6 @@
           templateUrl: 'views/verify.html',
           controller: 'VerifyCtrl',
           controllerAs: 'VerifyCtrl'
-        }
-      }
-    })
-
-    .state('login', {
-      url: '/login/',
-      views: {
-        'header': {
-          templateUrl: 'views/partials/plain_header.html'
-        },
-        'content': {
-          templateUrl: 'views/login.html',
-          controller: 'LoginCtrl',
-          controllerAs: 'LoginCtrl'
         }
       }
     })
