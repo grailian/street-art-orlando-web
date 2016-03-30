@@ -19,7 +19,7 @@
 
       $http({
         method: 'POST',
-        url: 'http://codehangar-api.herokuapp.com/api/v1/user',
+        url: 'http://localhost:9999/api/v1/user',
         data: creds
       }).success(function(data) {
         console.log('success', data);
