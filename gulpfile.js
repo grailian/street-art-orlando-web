@@ -8,7 +8,7 @@ var config = {
     rootDir: '.',
     servingPort: 8080,
     paths: {
-      src{
+      src: {
         scripts: './src/**/*.js',
         styles: './src/**/*.css',
         images: '',
