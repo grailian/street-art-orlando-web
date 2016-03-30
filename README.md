@@ -3,6 +3,11 @@
 #### Temporary Fix:
 `index.html` currently lives outside the `src` directory until a proper build/serve is implemented.
 
+## How to Run
+```shell
+$ gulp
+```
+
 ## Directory Structure
 - dist (build)
 - node_modules
