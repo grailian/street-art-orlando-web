@@ -16,8 +16,8 @@
         views: {
           'content': {
             templateUrl: 'src/views/Home/Home.html',
-            controller: 'HomeCtrl'
-        //     // controllerAs: 'MainCtrl'
+            controller: 'HomeCtrl',
+            controllerAs: 'MainCtrl'
           }
         }
       })
@@ -28,7 +28,7 @@
         'content': {
           templateUrl: 'src/views/Home/Home.html',
           controller: 'HomeCtrl',
-      //     // controllerAs: 'MainCtrl'
+          controllerAs: 'MainCtrl'
         }
       }
     })
@@ -55,7 +55,18 @@
       }
     })
 
-        .state('admin', {
+    .state('forgot', {
+      url: '/forgot/',
+      views: {
+        'content': {
+          templateUrl: 'src/views/Forgot/Forgot.html',
+          controller: 'ForgotCtrl',
+          controllerAs: 'ForgotCtrl'
+        }
+      }
+    })
+
+    .state('admin', {
       url: '/admin/',
       views: {
         'header': {
@@ -84,20 +95,6 @@
           templateUrl: 'views/verify.html',
           controller: 'VerifyCtrl',
           controllerAs: 'VerifyCtrl'
-        }
-      }
-    })
-
-    .state('forgot', {
-      url: '/forgot/',
-      views: {
-        'header': {
-          templateUrl: 'views/partials/plain_header.html'
-        },
-        'content': {
-          templateUrl: 'views/forgot.html',
-          controller: 'ForgotCtrl',
-          controllerAs: 'ForgotCtrl'
         }
       }
     })
