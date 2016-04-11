@@ -31,6 +31,9 @@ $ gulp
 - package.json
 - README.md
 
+###Favicons
+Favicons generated using http://realfavicongenerator.net/
+
 
 ## Libs Coming Soon
 * jquery
