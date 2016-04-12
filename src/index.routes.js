@@ -44,6 +44,17 @@
       }
     })
 
+    .state('ladies', {
+      url: '/utils/ladies',
+      views: {
+        'content': {
+          templateUrl: 'src/views/Ladies/Ladies.html',
+          controller: 'LadiesCtrl',
+          controllerAs: 'LadiesCtrl'
+        }
+      }
+    })
+
     .state('login', {
       url: '/login/',
       views: {
