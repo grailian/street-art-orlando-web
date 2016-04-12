@@ -1,7 +1,7 @@
 console.log('webpack');
 
 //CSS & SCSS
-require("../src/index.scss");
+require("!style!css!sass!./index.scss");
 
 //JS NODE_MODULES
 require('../node_modules/angular/angular.js')

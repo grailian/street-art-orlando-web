@@ -3,9 +3,14 @@
 #### Temporary Fix:
 `index.html` currently lives outside the `src` directory until a proper build/serve is implemented.
 
+## Getting Started
+```shell
+npm install
+```
+
 ## How to Run
 ```shell
-$ gulp
+$ npm start
 ```
 
 ## Directory Structure
