@@ -33,6 +33,17 @@
       }
     })
 
+    .state('utils', {
+      url: '/utils',
+      views: {
+        'content': {
+          templateUrl: 'src/views/Utils/Utils.html',
+          controller: 'UtilsCtrl',
+          controllerAs: 'UtilsCtrl'
+        }
+      }
+    })
+
     .state('login', {
       url: '/login/',
       views: {
