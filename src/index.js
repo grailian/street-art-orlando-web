@@ -4,6 +4,7 @@
   angular
     .module('codehangar', [
       'ui.router',
+      'ui.bootstrap'
     ]);
 
   angular
