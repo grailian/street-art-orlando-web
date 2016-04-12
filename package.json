@@ -1,6 +1,11 @@
 {
   "name": "codehangar-ui",
   "version": "0.0.0",
+  "author": "Code Hangar",
+  "License": "ISC",
+  "engines" : { 
+    "npm" : "~1.0.20" 
+  },
   "dependencies": {
     "angular": "^1.5.3",
     "angular-ui-router": "^0.2.18",
@@ -20,6 +25,7 @@
   "scripts": {
     "start": "node ./tools/start",
     "build": "node ./tools/build",
-    "serve": "node ./tools/serve"
+    "serve": "node ./tools/serve",
+    "deploy": "./deploy-dev.sh ladies.codehangar.io 1"
   }
 }

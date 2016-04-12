@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.12'
+addons:
+  apt:
+    packages:
+      - sshpass
+before_script:
+after_success:
+  - export SSHPASS=${DEPLOY_PASS}
+  - export TEST_ENV_VAL=heythere
+  - export TEST_ENV_VAL2=${TEST_VAR}
+  - ./deploy-dev.sh
