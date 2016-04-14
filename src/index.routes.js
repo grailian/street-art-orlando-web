@@ -44,8 +44,8 @@
       }
     })
 
-    .state('ladies', {
-      url: '/utils/ladies',
+    .state('community', {
+      url: '/utils/community',
       views: {
         'content': {
           templateUrl: 'src/views/Ladies/Ladies.html',
