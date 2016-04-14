@@ -1,8 +1,2 @@
-$darkest-color: #000;
-$dark-color: #222;
-$lighter-color: #fff;
-
-html,body
-{
-    background-color: $lighter-color;
-}
+@import "/bootstrap-variables-custom";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
