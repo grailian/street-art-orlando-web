@@ -1,4 +1,6 @@
-# Code Hangar Base UI Angular 1.x
+# Code Hangar Utils
+
+[![Build Status](https://travis-ci.org/codehangar/utils-codehangar.svg?branch=master)](https://travis-ci.org/codehangar/utils-codehangar)
 
 #### Temporary Fix:
 `index.html` currently lives outside the `src` directory until a proper build/serve is implemented.
