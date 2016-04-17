@@ -13,9 +13,4 @@ require('../src/index.js')
 require('../src/index.routes.js')
 
 //JS VIEW CONTROLLERS
-require('../src/views/Home/HomeCtrl.js')
 require('../src/views/Utils/UtilsCtrl.js')
-require('../src/views/Ladies/LadiesCtrl.js')
-require('../src/views/Login/LoginCtrl.js')
-require('../src/views/Register/RegisterCtrl.js')
-require('../src/views/Forgot/ForgotCtrl.js')

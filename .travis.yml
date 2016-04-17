@@ -1,13 +1,17 @@
 language: node_js
 node_js:
-- '0.12'
+- '5.10.1'
 addons:
   apt:
     packages:
       - sshpass
 before_script:
-after_success:
-  - export SSHPASS=${DEPLOY_PASS}
-  - export TEST_ENV_VAL=heythere
-  - export TEST_ENV_VAL2=${TEST_VAR}
-  - ./deploy-dev.sh
+  - npm install
+script:
+  - npm run build
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: tools/deploy.sh
+  on:
+    branch: master

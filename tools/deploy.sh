@@ -1,25 +1,12 @@
 #!/bin/sh
 
-# Arg 1 = Reponame
-# Arg 2 = Rev number
+# Used internally by sshpass pacakge/lib
+export SSHPASS=${DEPLOY_PASS}
 
-if [ "$TRAVIS_BRANCH" != "master" ]; then
-  exit 1
-fi
-
-REPONAME=ladies.codehangar.io
+REPONAME=utils-codehangar
 REVISION=${TRAVIS_BUILD_NUMBER}
 REV_NAME=${REPONAME}-${REVISION}
 echo "REV_NAME:" ${REV_NAME}
-echo "TEST_ENV_VAL:" ${TEST_ENV_VAL}
-echo "TEST_ENV_VAL2:" ${TEST_ENV_VAL2}
-echo "TEST_VAR:" ${TEST_VAR}
-echo "TEST_VAR2:" ${TEST_VAR2}
-
-# npm install
-# bower install
-# gulp clean
-# gulp build
 
 # Create tarball
 # tar -C dist -cvf artifacts/${REV_NAME}.tar .

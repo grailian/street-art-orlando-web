@@ -2,138 +2,25 @@
   'use strict';
 
   angular
-    .module('codehangar')
+    .module('utils.codehangar')
     .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    // $urlRouterProvider.otherwise('/errors/404/');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
       .state('root', {
         url: '/',
         views: {
           'content': {
-            templateUrl: 'src/views/Home/Home.html',
-            controller: 'HomeCtrl',
-            controllerAs: 'MainCtrl'
+            templateUrl: 'src/views/Utils/Utils.html',
+            controller: 'UtilsCtrl',
+            controllerAs: 'UtilsCtrl'
           }
         }
-      })
-
-    .state('home', {
-      url: '/home',
-      views: {
-        'content': {
-          templateUrl: 'src/views/Home/Home.html',
-          controller: 'HomeCtrl',
-          controllerAs: 'MainCtrl'
-        }
-      }
-    })
-
-    .state('utils', {
-      url: '/utils',
-      views: {
-        'content': {
-          templateUrl: 'src/views/Utils/Utils.html',
-          controller: 'UtilsCtrl',
-          controllerAs: 'UtilsCtrl'
-        }
-      }
-    })
-
-    .state('community', {
-      url: '/utils/community',
-      views: {
-        'content': {
-          templateUrl: 'src/views/Ladies/Ladies.html',
-          controller: 'LadiesCtrl',
-          controllerAs: 'LadiesCtrl'
-        }
-      }
-    })
-
-    .state('login', {
-      url: '/login/',
-      views: {
-        'content': {
-          templateUrl: 'src/views/Login/Login.html',
-          controller: 'LoginCtrl',
-          controllerAs: 'LoginCtrl'
-        }
-      }
-    })
-
-    .state('register', {
-      url: '/register/',
-      views: {
-        'content': {
-          templateUrl: 'src/views/Register/Register.html',
-          controller: 'RegisterCtrl',
-          controllerAs: 'RegisterCtrl'
-        }
-      }
-    })
-
-    .state('forgot', {
-      url: '/forgot/',
-      views: {
-        'content': {
-          templateUrl: 'src/views/Forgot/Forgot.html',
-          controller: 'ForgotCtrl',
-          controllerAs: 'ForgotCtrl'
-        }
-      }
-    })
-
-    .state('admin', {
-      url: '/admin/',
-      views: {
-        'header': {
-          templateUrl: 'views/partials/header.html'
-        },
-        'content': {
-          templateUrl: 'views/admin.html',
-          controller: 'AdminCtrl',
-          controllerAs: 'AdminCtrl'
-        }
-      },
-      resolve: {
-        Session: function(Middleware) {
-          return Middleware.getSession();
-        }
-      }
-    })
-
-    .state('verify', {
-      url: '/verify/',
-      views: {
-        // 'header': {
-          // templateUrl: 'views/partials/header.html'
-        // },
-        'content': {
-          templateUrl: 'views/verify.html',
-          controller: 'VerifyCtrl',
-          controllerAs: 'VerifyCtrl'
-        }
-      }
-    })
-
-    .state('reset', {
-      url: '/reset/',
-      views: {
-        'header': {
-          templateUrl: 'views/partials/plain_header.html'
-        },
-        'content': {
-          templateUrl: 'views/reset.html',
-          controller: 'ResetCtrl',
-          controllerAs: 'ResetCtrl'
-        }
-      }
-    });
+      });
 
     $urlRouterProvider.rule(function($injector, $location) {
       var path = $location.url();

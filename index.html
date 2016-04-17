@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="codehangar" class="no-js">
+<html lang="en" ng-app="utils.codehangar" class="no-js">
 
-<head>
+  <head>
     <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,23 +32,20 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    
-</head>
 
-<body>
+  </head>
+
+  <body>
+
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+    <![endif]-->
+
     <div ui-view="content"></div>
-    
-    <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
 
     <!-- FOR WEBPACK -->
     <script src="builds/bundle.js"></script>
 
-
-</body>
+  </body>
 
 </html>
