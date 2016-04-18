@@ -15,7 +15,7 @@
         url: '/',
         views: {
           'content': {
-            templateUrl: 'src/views/Utils/Utils.html',
+            templateUrl: 'views/Utils/Utils.html',
             controller: 'UtilsCtrl',
             controllerAs: 'UtilsCtrl'
           }

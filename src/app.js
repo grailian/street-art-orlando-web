@@ -1,5 +1,14 @@
 console.log('webpack');
 
+// FAVICONS & IMAGES
+require.context('./components', true, /^\.\//);
+require.context('./favicons', true, /^\.\//);
+require.context('./views', true, /^\.\//);
+
+// TEMPLATES
+require.context('./', true, /\.html$/);
+
+
 //CSS & SCSS
 require("!style!css!sass!./index.scss");
 
@@ -9,8 +18,8 @@ require('../node_modules/angular-ui-router/release/angular-ui-router.min.js')
 require('../node_modules/angular-ui-bootstrap/index.js')
 
 //JS APP SCRIPTS
-require('../src/index.js')
-require('../src/index.routes.js')
+require('./index.js')
+require('./index.routes.js')
 
 //JS VIEW CONTROLLERS
-require('../src/views/Utils/UtilsCtrl.js')
+require('./views/Utils/UtilsCtrl.js')

@@ -30,7 +30,7 @@
   "scripts": {
     "start": "node ./tools/start",
     "build": "node ./tools/build",
-    "serve": "node ./tools/serve",
-    "deploy": "./deploy-dev.sh ladies.codehangar.io 1"
+    "serve": "gulp serve",
+    "deploy": "./deploy-dev.sh"
   }
 }
