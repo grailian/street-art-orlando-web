@@ -26,8 +26,8 @@
         views: {
           'content': {
             templateUrl: 'views/Rethink/index.html',
-            controller: 'UtilsCtrl',
-            controllerAs: 'UtilsCtrl'
+            controller: 'RethinkCtrl',
+            controllerAs: 'RethinkCtrl'
           }
         }
       });
