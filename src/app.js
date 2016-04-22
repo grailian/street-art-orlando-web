@@ -23,3 +23,4 @@ require('./index.routes.js')
 
 //JS VIEW CONTROLLERS
 require('./views/Utils/UtilsCtrl.js')
+require('./views/Rethink/index.js')

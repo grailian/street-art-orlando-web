@@ -15,7 +15,17 @@
         url: '/',
         views: {
           'content': {
-            templateUrl: 'views/Utils/Utils.html',
+            templateUrl: 'views/Utils/index.html',
+            controller: 'UtilsCtrl',
+            controllerAs: 'UtilsCtrl'
+          }
+        }
+      })
+      .state('rethink', {
+        url: '/rethink',
+        views: {
+          'content': {
+            templateUrl: 'views/Rethink/index.html',
             controller: 'UtilsCtrl',
             controllerAs: 'UtilsCtrl'
           }
