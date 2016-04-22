@@ -4,7 +4,7 @@ var spawn = require('child_process').spawn;
 
 var child = require('./build');
 
-child.stdout.on('data', function(chunk) {
+child.stdout.on('close', function(chunk) {
 
   var child2 = spawn('gulp', ['serve']);
   child2.stdout.pipe(process.stdout);
