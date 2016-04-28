@@ -1,6 +1,23 @@
 @import "/bootstrap-codehangar-vars";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+$brand-teal: #2aa198;
+
+
 p {
   font-weight: 200;
+}
+
+.reql-container{
+  background: $brand-teal;
+  color:#fff;
+  .btn-default{
+    background: #fff;
+    color: $brand-teal;
+    border: 3px #fff solid;
+    &:hover{
+      color: #fff;
+      background: $brand-teal;
+    }
+  }
 }

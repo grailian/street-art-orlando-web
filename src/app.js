@@ -4,6 +4,7 @@ console.log('webpack');
 require.context('./components', true, /^\.\//);
 require.context('./favicons', true, /^\.\//);
 require.context('./views', true, /^\.\//);
+require.context('./images', true, /^\.\//);
 
 // TEMPLATES
 require.context('./', true, /\.html$/);
