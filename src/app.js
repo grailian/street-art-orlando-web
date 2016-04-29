@@ -22,6 +22,9 @@ require('../node_modules/angular-ui-bootstrap/index.js')
 require('./index.js')
 require('./index.routes.js')
 
+// JS COMPONENTS
+require('./components/Footer/Footer.js');
+
 //JS VIEW CONTROLLERS
 require('./views/Utils/index.js')
 require('./views/Rethink/index.js')
