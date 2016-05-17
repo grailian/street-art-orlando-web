@@ -28,3 +28,4 @@ require('./components/Footer/Footer.js');
 //JS VIEW CONTROLLERS
 require('./views/Utils/index.js')
 require('./views/Rethink/index.js')
+require('./views/RethinkSupport/index.js')

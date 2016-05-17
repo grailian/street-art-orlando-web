@@ -3,6 +3,10 @@
 
 $brand-teal: #2aa198;
 
+.navbar-default{
+  margin-bottom:0;
+}
+
 .no-pad-right {
   padding-right: 0
 }
@@ -15,16 +19,29 @@ p {
   font-weight: 200;
 }
 
-.reql-container{
+.alt-container{
+  background: #f9f9f9;
+}
+
+.reql-container, .reql-container2{
   background: $brand-teal;
   color:#fff;
-  .btn-default{
+  .btn-primary{
     background: #fff;
     color: $brand-teal;
     border: 3px #fff solid;
     &:hover{
       color: #fff;
       background: $brand-teal;
+    }
+  }
+  .btn-default{
+    background: $brand-teal;
+    color: #fff;
+    border: 3px #fff solid;
+    &:hover{
+      color: $brand-teal;
+      background: #fff;
     }
   }
 }
@@ -51,3 +68,14 @@ p {
   margin-left: 30px;
   line-height: 60px;
 }
+
+
+@media(max-width:767px){
+}
+@media(min-width:768px){
+  .reql-container .text-center{
+    text-align: left;
+  }
+}
+@media(min-width:992px){}
+@media(min-width:1200px){}

@@ -19,7 +19,8 @@
         "button link": null
       });
 
-      alert('Stay tuned! ReQL Pro will be available for download soon!');
+      // alert('Stay tuned! ReQL Pro will be available for download soon!');
+      $location.path('/rethink');
     }
 
 

@@ -1,46 +1,91 @@
 <!-- HEADER -->
 <div ng-include="'components/Header-Utils/index.html'"></div>
 
-<div class="container">
+<div class="container-fluid reql-container">
   <div class="row" style="margin:60px 0;">
-    <div class="col-sm-12">
-      <h1 class="text-center">ReQL Pro</h1>
-      <p class="lead text-center">RethinkDB GUI tool for Mac OS X and Windows</p>
-      <p class="text-center">ReQL Pro provides a clean and simple interface for you to browse and modify your RethinkDB data quickly.</p>
-      <p class="text-center">
-        <button class="btn btn-default btn-lg">Download the App</button>
-        <br>
-        <small>It's free!</small></p>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <h1 class="text-center"><img src="images/reql-teal-bg.png" alt="ReQL Pro" style="max-width:500px; width:80%;"></h1>
+          <p class="lead text-center">RethinkDB GUI tool for Mac OS X</p>
+          <p class="text-center">
+            <a ng-click="clickReql($event)" class="btn btn-primary btn-lg">Download the App</a>
+            <a href="#learnmore" class="btn btn-default btn-lg">Learn More</a>
+          </p>
+
+        </div>
+        <div class="col-sm-5 text-center">
+          <img src="images/reql-icon.png" alt="" style="width:80%;">
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<hr/>
+
 <div class="container">
   <div class="row" style="margin:60px 0;">
-    <div class="col-sm-12">
-      <h2 class="">FAQs</h2>
+    <div class="col-md-12">
+      <h2 class="text-center">Clean and Simple Interface</h2>
+      <p class="lead text-center">ReQL Pro provides a clean and simple interface for you to browse and modify your RethinkDB data quickly.</p>
+    </div>
+  </div>
+</div>
+<!-- <hr/> -->
+<div class="container-fluid alt-container">
+  <div class="row" style="margin:60px 0;">
+    <div class="container" id="learnmore">
+      <div class="col-sm-12">
+        <h2 class="text-center">Frequently asked Questions</h2>
 
-      <h3 class="">Why ReQL Pro? Why not use the RethinkDB web interface?</h3>
-      <p>To browse data using the RethinkDB web interface you must manually type ReQL commands. ReQLPro provides a much more flexible user interface allowing you to browse, page, sort, edit, and delete, with familiar, easy to use point and click controls.</p>
-      <hr>
+        <h3 class="">Why ReQL Pro? Why not use the RethinkDB web interface?</h3>
+        <p>To browse data using the RethinkDB web interface you must manually type ReQL commands. ReQLPro provides a much more flexible user interface allowing you to browse, page, sort, edit, and delete, with familiar, easy to use point and click controls.</p>
+        <hr>
 
-      <h3 class="">Is ReQL Pro Open Source?</h3>
-      <p>Not yet, but we are looking forward to open sourcing it in the future, so stay tuned.</p>
-      <hr>
+        <h3 class="">Is ReQL Pro Open Source?</h3>
+        <p>Not yet, but we are looking forward to open sourcing it in the future, so stay tuned.</p>
+        <hr>
 
-      <h3 class="">How do I report bugs and suggest new features?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam laboriosam quasi temporibus eligendi atque commodi ipsum, fuga, voluptates sed officiis soluta quos animi obcaecati eius sequi dolorum veritatis cumque quia!.</p>
-      <hr>
+        <h3 class="">How do I report bugs and suggest new features?</h3>
+        <p>Head over to our <strong><a ui-sref="rethink-support">Help Center</a></strong> and send us a message. We appreciate your feedback because it helps us improve ReQLPro, so thanks!</p>
+        <!-- <hr>
 
-      <h3 class="">How do I support the development of ReQL Pro?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eaque ratione suscipit quas, adipisci tenetur non beatae illo incidunt? Quod, amet harum eaque. Soluta in obcaecati odit, quod molestias mollitia..</p>
+        <h3 class="">How do I support the development of ReQL Pro?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eaque ratione suscipit quas, adipisci tenetur non beatae illo incidunt? Quod, amet harum eaque. Soluta in obcaecati odit, quod molestias mollitia..</p> -->
 
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container-fluid">
+  <div class="row" style="margin:60px 0;">
+    <div class="container" id="learnmore">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center">ReQLPro: The Product, The Vision</h2>
+          <p class="lead text-center">Here's what you have to look forward to in future releases of ReQLPro.</p>
+          <ul>
+            <li>Advanced Searching</li>
+            <li>Changfeed functionality</li>
+            <li>Raw ReQL command output</li>
+            <li>Raw ReQL command input</li>
+            <li>Save and display a history of recent searches / saves / deletes</li>
+            <li>Ability to undo delete / update / insert</li>
+            <li>Add Table</li>
+            <li>Remove Table</li>
+            <li>View/Update Indexes</li>
+          </ul>
+
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- <hr> -->
-
-
-<!-- FOOTER -->
 <div footer></div>
+
+
+
+
