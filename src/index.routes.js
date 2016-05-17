@@ -30,6 +30,15 @@
             controllerAs: 'RethinkCtrl'
           }
         }
+      }).state('rethink-support', {
+        url: '/rethink/support',
+        views: {
+          'content': {
+            templateUrl: 'views/RethinkSupport/index.html',
+            controller: 'RethinkSupportCtrl',
+            controllerAs: 'RethinkSupportCtrl'
+          }
+        }
       });
 
     $urlRouterProvider.rule(function($injector, $location) {
