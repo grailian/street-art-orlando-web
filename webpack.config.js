@@ -21,6 +21,10 @@ module.exports = {
       test: /\.(jpg|jpeg|gif|png|ico|svg|xml|json|html)$/,
       exclude: /node_modules/,
       loader: 'file-loader?name=[path][name].[ext]&context=./src'
+    }, {
+      test: /\.(css|js)$/,
+      include: /src\/reql-sales-page/,
+      loader: 'file-loader?name=[path][name].[ext]&context=./src'
     }]
   },
   devtool: 'source-map',

@@ -8,6 +8,7 @@ require.context('./images', true, /^\.\//);
 
 // TEMPLATES
 require.context('./', true, /\.html$/);
+require.context('./reql-sales-page', true, /^\.\//);
 
 
 //CSS & SCSS
