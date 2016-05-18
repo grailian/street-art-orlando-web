@@ -55,7 +55,7 @@ gulp.task('default', ['serve']);
 gulp.task("styles", function() {
   return gulp.src("src/index.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("sass-out/"));
+    .pipe(gulp.dest("dist/sass-out/"));
 });
 
 //default: clean-build-prod
