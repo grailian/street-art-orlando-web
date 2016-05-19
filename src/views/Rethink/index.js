@@ -35,7 +35,7 @@
     };
 
     vm.init = function() {
-      vm.downloadCTA = 'Download';
+      vm.downloadCTA = 'Get the Beta';
     };
 
     vm.init();
