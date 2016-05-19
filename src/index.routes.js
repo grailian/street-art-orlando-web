@@ -17,7 +17,7 @@
           'content': {
             templateUrl: 'views/Utils/index.html',
             controller: 'UtilsCtrl',
-            controllerAs: 'UtilsCtrl'
+            controllerAs: 'vm'
           }
         }
       })
@@ -27,7 +27,7 @@
           'content': {
             templateUrl: 'views/Rethink/index.html',
             controller: 'RethinkCtrl',
-            controllerAs: 'RethinkCtrl'
+            controllerAs: 'vm'
           }
         }
       }).state('rethink-support', {
@@ -36,7 +36,7 @@
           'content': {
             templateUrl: 'views/RethinkSupport/index.html',
             controller: 'RethinkSupportCtrl',
-            controllerAs: 'RethinkSupportCtrl'
+            controllerAs: 'vm'
           }
         }
       });

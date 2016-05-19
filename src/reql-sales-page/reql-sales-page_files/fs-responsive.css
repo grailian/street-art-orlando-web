@@ -1,0 +1,125 @@
+
+@media only screen and (max-width: 767px) {
+  
+.core-form-field-area-left, .core-form-field-area-right {
+    float: none;
+    margin: 0;
+    width: 100%;
+}
+.core-form-field-area-right {
+    margin-top: 10px !important;
+}
+.store-product-detail-image img {
+    max-width:100%;
+    height: auto;
+}
+.store-product-list-item-image img {
+    max-width: 100px;
+    height: auto;
+}
+
+.store-decorate-silk .store-section-customer-details input[type="text"], .store-page-subscription-update-address input[type="text"] {padding:6px 0 6px 6px !important;width:100% !important;}
+.store-decorate-silk .store-section-customer-details select, .store-page-subscription-update-address select {padding-left:3px !important;padding-right:20px !important; width:102% !important;}
+.store-survey .core-form-field-input-text {
+    max-width: 20em;
+    width: 100%;
+}
+#head-security {
+    background: url("fs_secure-ordering.png") no-repeat scroll 5px 17px rgba(0, 0, 0, 0);
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+.store-notice-bill-descriptor {
+    display: block;
+    margin-top: 10px;
+}
+.store-product-detail-pricing {
+    display: block;
+}
+.store-order-price-label {
+    width: 65%;
+}
+.store-section-payment-details-cc .core-form-field-group-body {
+    margin-left: 0;
+}
+.store-action-view-help {
+    display: none !important;
+}
+.store-decorate-silk .store-order-item-subscription .store-order-item-title, .store-decorate-silk .store-offer-file-backup-cd .store-order-item-title, .store-decorate-silk .store-offer-file-backup-digital .store-order-item-title  {
+    white-space: normal;
+    max-width: 60%;
+}
+.store-decorate-silk .store-offer-file-backup-digital .store-order-item-title {
+    background: url("//dcnz2rrcot657.cloudfront.net/silk/drive_add.png") no-repeat scroll left 2px rgba(0, 0, 0, 0);
+}
+.store-decorate-silk .store-offer-file-backup-cd .store-order-item-title {
+    background: url("//dcnz2rrcot657.cloudfront.net/silk/cd_add.png") no-repeat scroll left 2px rgba(0, 0, 0, 0);
+}
+.store-decorate-silk .store-order-item-subscription .store-order-item-title {
+    background: url("//dcnz2rrcot657.cloudfront.net/silk/arrow_refresh.png") no-repeat scroll left 2px rgba(0, 0, 0, 0);
+}
+.store-decorate-silk .core-message-warn, .store-decorate-silk .core-message-error, .store-decorate-silk .core-message-fatal {
+    background: url("//dcnz2rrcot657.cloudfront.net/silk/exclamation.png") no-repeat scroll left 2px rgba(0, 0, 0, 0);
+}
+.store-decorate-silk .core-message-info {
+    background: url("//dcnz2rrcot657.cloudfront.net/silk/information.png") no-repeat scroll left 2px rgba(0, 0, 0, 0);
+}
+.store-decorate-silk .store-notice-bill-descriptor-message {
+    background: url("//dcnz2rrcot657.cloudfront.net/silk/information.png") no-repeat scroll left 3px rgba(0, 0, 0, 0);
+}
+
+.store-order-item-base-title {
+    max-width: 50%;
+    width: 100%;
+    font-weight:600;
+}
+.store-order-item-offers {
+    max-width: 50%;
+    width: 100%;
+}
+.store-order-item-offer {
+    display: block;
+}
+.store-style-inline-form .core-form-field-label label, .core-form-field-label {
+    white-space: normal;
+}
+.store-order-item-description {
+    margin-left: 20px;
+}
+.store-order-action-coupon-li {
+    display: block !important;
+    margin-top: 1em !important;
+}
+.steps  {display:none;}
+.store-field-contact-email .core-form-field-body-note{
+	font-size: 0.75em;
+	width:95% !important;
+}
+.store-page-subscription-update .store-field-cc-number input {
+    width: 95%;
+}
+.store-order-item-group-action-list li {
+    display: block;
+    margin: 3px 0;
+    font-size:.9em;
+}
+.store-decorate-button .store-page-navigation .store-action-command  {
+    font-size: 1.15em !important;
+}
+#store-processing-element {
+    background: url("//dcnz2rrcot657.cloudfront.net/progress/bar.gif") no-repeat scroll center 20px rgba(0, 0, 0, 0);
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -15px;
+    max-width: 200px;
+    padding-left: 0;
+    text-align: center;
+}
+  }
+ 

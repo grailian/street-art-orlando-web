@@ -3,26 +3,41 @@
 
   angular
     .module('utils.codehangar')
-    .controller('RethinkCtrl', RethinkCtrl);
+    .controller('RethinkCtrl', controller);
 
-  function RethinkCtrl($scope, $timeout, $http, $window, $state, $location) {
+  controller.$inject = ['$timeout'];
 
-    $scope.init = function() {
-      console.log('Hello RethinkCtrl')
+  function controller($timeout) {
+
+    var vm = this;
+
+    vm.download = function(downloadForm) {
+      downloadForm.$setDirty();
+
+      console.log("downloadForm.$valid", downloadForm.$valid)
+      if (downloadForm.$valid) {
+        analytics.alias(vm.downloadEmail, {}, {}, function() {
+          analytics.identify(vm.downloadEmail, {
+            email: vm.downloadEmail
+          });
+
+          analytics.track('clicked download ReQLPro', {
+            "downloadCTA": vm.downloadCTA,
+            "downloadEmail": vm.downloadEmail
+          });
+
+          $timeout(function() {
+            vm.showDownloadSuccess = true;
+            console.log("vm.showDownloadSuccess", vm.showDownloadSuccess)
+          });
+        })
+      }
     };
 
-    $scope.clickReql = function(event) {
-      // console.log('event',event.target.innerHTML);
+    vm.init = function() {
+      vm.downloadCTA = 'Get the Beta';
+    };
 
-      analytics.track('clicked get ReQL', {
-        "button cta": event.target.innerHTML,
-        "button link": null
-      });
-
-      alert('Stay tuned! ReQL Pro will be available for download soon!');
-      // $location.path('/rethink');
-    }
-
-    $scope.init();
+    vm.init();
   }
 })();
