@@ -3,6 +3,7 @@
 
   angular
     .module('utils.codehangar', [
+      'ngMessages',
       'ui.router',
       'ui.bootstrap'
     ]);
