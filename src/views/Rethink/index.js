@@ -5,9 +5,9 @@
     .module('utils.codehangar')
     .controller('RethinkCtrl', controller);
 
-  controller.$inject = ['$timeout'];
+  controller.$inject = ['$timeout', '$http'];
 
-  function controller($timeout) {
+  function controller($timeout, $http) {
 
     var vm = this;
 
@@ -31,6 +31,14 @@
             console.log("vm.showDownloadSuccess", vm.showDownloadSuccess)
           });
         })
+
+        $http.post('https://contact-form-api.herokuapp.com/api/v1/contact/reqlpro', {
+          email: vm.downloadEmail
+        }).then(function(res) {
+          console.log("res", res)
+        }).catch(function(err) {
+          console.log("err", err)
+        });
       }
     };
 
