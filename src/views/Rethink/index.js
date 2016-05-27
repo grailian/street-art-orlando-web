@@ -25,17 +25,17 @@
             "downloadCTA": vm.downloadCTA,
             "downloadEmail": vm.downloadEmail
           });
-
-          $timeout(function() {
-            vm.showDownloadSuccess = true;
-            console.log("vm.showDownloadSuccess", vm.showDownloadSuccess)
-          });
         })
 
         $http.post('https://contact-form-api.herokuapp.com/api/v1/contact/reqlpro', {
           email: vm.downloadEmail
         }).then(function(res) {
           console.log("res", res)
+
+          $timeout(function() {
+            vm.showDownloadSuccess = true;
+            console.log("vm.showDownloadSuccess", vm.showDownloadSuccess)
+          });
         }).catch(function(err) {
           console.log("err", err)
         });
