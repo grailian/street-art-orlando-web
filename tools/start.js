@@ -1,21 +1,12 @@
 console.log('start');
 
 var spawn = require('child_process').spawn;
+var opn = require('opn');
 
-var child = require('./build');
+var child1 = spawn('webpack-dev-server', ['--port', '8081', '--colors']);
+child1.stdout.pipe(process.stdout);
+child1.stderr.pipe(process.stderr);
 
-child.stdout.on('close', function(chunk) {
-
-  var child1 = spawn('gulp', ['styles']);
-  child1.stdout.pipe(process.stdout);
-  child1.stderr.pipe(process.stderr);
-
-  var child2 = spawn('gulp', ['serve']);
-  child2.stdout.pipe(process.stdout);
-  child2.stderr.pipe(process.stderr);
-
-  var child3 = spawn('webpack', ['--colors', '--watch']);
-  child3.stdout.pipe(process.stdout);
-  child3.stderr.pipe(process.stderr);
-
-});
+setTimeout(function() {
+  opn('http://localhost:8081');
+}, 2000);
