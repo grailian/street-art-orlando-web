@@ -3,7 +3,6 @@ var connect = require('gulp-connect');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var opn = require('opn');
-var sass = require("gulp-sass");
 
 var config = {
   rootDir: '.',
@@ -52,11 +51,6 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['serve']);
 
-gulp.task("styles", function() {
-  return gulp.src("src/index.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("dist/sass-out/"));
-});
 
 //default: clean-build-prod
 //serve dev

@@ -1,6 +1,5 @@
-# Code Hangar Utils
+# Street Art Orlando - Web UI
 
-[![Build Status](https://travis-ci.org/codehangar/utils-codehangar.svg?branch=master)](https://travis-ci.org/codehangar/utils-codehangar)
 
 ## Getting Started
 ```shell
