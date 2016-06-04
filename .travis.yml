@@ -1,22 +1,23 @@
 language: node_js
 node_js:
-  - '5.10.1'
+- 5.10.1
 addons:
   apt:
     packages:
-      - sshpass
+    - sshpass
 install:
-  - npm install
+- npm install
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm run build
+- npm run build
 deploy:
-  on:
-    branch: master
   skip_cleanup: true
   provider: heroku
   app: orlando-street-art
   api_key:
-    secure: X/fneB3jTD3S6HgJwfvSb05wxKE/u/jC5O/xBlXOkOztKRg/dNzw5Xns6N6qDDWTlCEeQk4zegPto/KU15sucdA5VRnLZWM2E6CAxC41xe9ru5k5MpvQqIHXbtBwHEpWEc+QhPt3Ha9z2pnfEI3b5ZlU2BM6zFE2GYX3adQv8eiKy5tkeSs3g+o54iLUmv1SVIRuNNokajvpjJ+GQaYIdw0KQUsXo+m8yUejA1a4orFdRvcml5wv3w7Wce/AJ4ejgFzWX1d4qyG54mYo8JfJmiFgpuA0ngzUtrqsMrycNH+ZKjpC96TN6Mgc+h8sWes4wd9OrEBv41Pi1TzmX5gYuf2ra/ZFqIrTaUlq50WLmTK2E6JiqpyTz6q3cacPSx7uOUwZ74uYierSwFthVa+u7Xo4lwnnTmYE5db/UTUhPJssYWFFKB/YY9ggS1B5hUX6Hz6P5fhhFe55UsxRWqoL4vfvIsH0QcvhoPVT7Ge76htd9s6gjBOp7/sXsC0445h+nYqP+o6QtGuVeSbPOY5Vy+EI1ultJBUCMr5CqgazzKX04jRg0ihWnZcj4qFDEtrB2NirBehNvWIanLnos1YwuCeloSFljueVxOdCjngrXr4B/y0e4HDAY5pd9x6/ZUapqOp5UtU9BvLtdcLQOKEsSX+x0bGPQhCISgNDRiXiDYk=
+    secure: vW8SNOYyxeX/EoXovtlwZIU5aW5E6FaLHNAu4YcLDZarnxfr7x7jBbGz75Wt8xJE7gnsDEzbQwhBtxOMv7udY72IRH4L02WnzKmOOXCW5UGZuhhQGbjRnRGaFoq7HveY1osHb3bDw3DwLu8NZcQ1g6gZeWWRGAdANzGnFXKXbHVJL/1XIU8Rda1ntF9vPhkhgKxVKVCB0g6xy2D7ykjO3PyXkbZd3wfaO4PhibseXhbAFITOtdR17eDEOES2s+YxA2SgayR/G6pE9N2Gfop00AFw21ey+IERhcFVUQtwqYatrPX45Sxa1Tmc9iUomq2WN9QDnjcTFfVSZSW+QWSGdl1mrW7QJnP7C0p06rDxSDYWgOHh+a55Iy8i6ThrD1X0koZuWSRqaNaoUx2H3SEPqIiYvfBueiih94jV4Hw9irQQlHp5DpdJi5oEsMw/sDh9mCzfjg7ljz5+gl/5DTRE0882WIagEiF4Uzm168rpGcL6F8LIx+6oKM2bylLb1GJ66vE+soAccemLQ5UcSkodkFep6wbITGMm7Fi2dTN4H6oZUZdmKUsnWTIjzQBjccS5L2ZGozAzIgncbS1l8CcdvvX+243Ucov/C1XBxP31n0sssYCZ+2nDnpQUJl1E2M0ARsnMBUfOtuyXWeJNfTxvNksued2++2P/J5CvPigZtko=
+  on:
+    repo: grailian/street-art-orlando-web
+    branch: master
