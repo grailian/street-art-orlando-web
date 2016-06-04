@@ -21,11 +21,11 @@
           }
         }
       })
-      .state('rethink', {
-        url: '/rethink',
+      .state('art', {
+        url: '/art',
         views: {
           'content': {
-            templateUrl: 'views/Rethink/index.html',
+            templateUrl: 'views/ArtInstallation/index.html',
             controller: 'RethinkCtrl',
             controllerAs: 'vm'
           }
