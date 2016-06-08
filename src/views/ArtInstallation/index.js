@@ -20,7 +20,7 @@
         .error(function(err) {
           console.error("err", err)
         });
-    }
+    };
 
     vm.getInstallation = function(id) {
       ArtService.getInstallation(id)
@@ -28,6 +28,18 @@
           vm.installation = data;
           console.log("vm.installation", vm.installation)
           vm.getArtist(vm.installation.creator.objectId);
+          vm.getNearbyInstallations(vm.installation.location);
+        })
+        .error(function(err) {
+          console.error("err", err)
+        });
+    };
+
+    vm.getNearbyInstallations = function(location) {
+      ArtService.getInstallations(location)
+        .success(function(data) {
+          vm.installations = data.results.slice(0,3);
+          console.log("vm.installations", vm.installations)
         })
         .error(function(err) {
           console.error("err", err)

@@ -2,7 +2,6 @@ console.log('webpack');
 
 // FAVICONS & IMAGES
 require.context('./components', true, /^\.\//);
-require.context('./favicons', true, /^\.\//);
 require.context('./views', true, /^\.\//);
 require.context('./images', true, /^\.\//);
 
