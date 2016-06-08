@@ -30,7 +30,8 @@
 
 .hero{
   height: 100vh;
-  background: url('./images/StreetArtOrlando_Logo_0.png');
+  background: url('./images/StreetArtOrlando_Logo_0.png') center center no-repeat;
+  background-size:cover;
 }
 
 .thumbnail {
@@ -48,6 +49,9 @@
 }
 
 @media(max-width:767px){
+.hero{
+  height: 50vh;
+}
 }
 @media(min-width:768px){
 }
