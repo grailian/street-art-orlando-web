@@ -5,7 +5,6 @@
     .module('utils.codehangar')
     .config(routeConfig);
 
-  /** @ngInject */
   function routeConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $urlRouterProvider.otherwise('/');
@@ -22,11 +21,11 @@
         }
       })
       .state('art', {
-        url: '/art',
+        url: '/art/:id',
         views: {
           'content': {
             templateUrl: 'views/ArtInstallation/index.html',
-            controller: 'RethinkCtrl',
+            controller: 'ArtInstallationCtrl',
             controllerAs: 'vm'
           }
         }

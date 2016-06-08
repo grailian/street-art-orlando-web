@@ -64,6 +64,15 @@ p {
   font-size: $font-size-small
 }
 
+.thumbnail {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.tags {
+  margin-right: 5px
+}
+
 .copyright-text {
   margin-left: 30px;
   line-height: 60px;
