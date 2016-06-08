@@ -62,7 +62,7 @@
           <!-- Coordinates -->
           <div ng-show="vm.installation.location">
             <h3 class="text-uppercase">Coordinates</h3>
-            <a ng-href="http://www.google.com/maps/place/{{vm.installation.location.latitude}},{{vm.installation.location.longitude}}" class="help-text">
+            <a ng-href="http://www.google.com/maps/place/{{vm.installation.location.latitude}},{{vm.installation.location.longitude}}" target="_blank" class="help-text">
               <span ng-bind="vm.installation.location.latitude"></span>,
               <span ng-bind="vm.installation.location.longitude"></span>
             </a>
