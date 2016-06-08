@@ -1,81 +1,41 @@
 @import "./bootstrap-theme-vars";
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-$brand-teal: #2aa198;
-
-.navbar-default{
+.navbar{
   margin-bottom:0;
 }
-
-.no-pad-right {
-  padding-right: 0
+.navbar-brand{
+   line-height: 32px;
 }
 
-.no-pad-left {
-  padding-left: 0
+.navbar-nav {
+  padding: 10px;
+  font-size: 1.1em;
 }
 
-p {
-  font-weight: 200;
+.navbar-nav > li > a{
+  padding: 5px 10px;
 }
 
-.alt-container{
-  background: #f9f9f9;
+.navbar-nav .primary {
+  border: 2px #fff solid;
+  border-radius: 20px;
+  margin: 0 5px;
+  padding: 4px 10px;
 }
 
-.reql-container, .reql-container2{
-  background: $brand-teal;
-  color:#fff;
-  .btn-primary{
-    background: #fff;
-    color: $brand-teal;
-    border: 3px #fff solid;
-    &:hover{
-      color: #fff;
-      background: $brand-teal;
-    }
-  }
-  .btn-default{
-    background: $brand-teal;
-    color: #fff;
-    border: 3px #fff solid;
-    &:hover{
-      color: $brand-teal;
-      background: #fff;
-    }
-  }
+.navbar-nav .primary:hover {
+    border: 2px rgba(255,255,255,.5) solid;
 }
 
-.newsletter {
-  margin-top: 50px;
-  background: $gray-dark;
-  color: #fff;
-  p {
-    color: $gray
-  }
-  .submit {
-    // width: 10%;
-  }
+.hero{
+  height: 100vh;
+  background: url('./images/StreetArtOrlando_Logo_0.png');
 }
-
-.footer-copyright {
-  background: $gray-darker;
-  height: 60px;
-  font-size: $font-size-small
-}
-
-.copyright-text {
-  margin-left: 30px;
-  line-height: 60px;
-}
-
 
 @media(max-width:767px){
 }
 @media(min-width:768px){
-  .reql-container .text-center{
-    text-align: left;
-  }
 }
 @media(min-width:992px){}
 @media(min-width:1200px){}

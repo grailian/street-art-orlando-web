@@ -27,6 +27,6 @@ require('./index.routes.js')
 require('./components/Footer/Footer.js');
 
 //JS VIEW CONTROLLERS
-require('./views/Utils/index.js')
+require('./views/home/home.js')
 require('./views/ArtInstallation/index.js')
 require('./views/RethinkSupport/index.js')
