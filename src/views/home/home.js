@@ -3,15 +3,28 @@
 
   angular
     .module('utils.codehangar')
-    .controller('HomeCtrl', HomeCtrl);
+    .controller('HomeCtrl', controller);
 
-  function HomeCtrl($scope, $timeout, $http, $window, $state, $location) {
+  controller.$inject = ['ArtService'];
 
-    $scope.init = function() {
-      console.log('Hello HomeCtrl')
+  function controller(ArtService) {
+    var vm = this;
+
+    vm.getNearbyInstallations = function(location) {
+      ArtService.getInstallations(location)
+        .success(function(data) {
+          vm.installations = data.results;
+          console.log("vm.installations", vm.installations)
+        })
+        .error(function(err) {
+          console.error("err", err)
+        });
     };
 
+    vm.init = function() {
+      vm.getNearbyInstallations();
+    };
 
-    $scope.init();
+    vm.init();
   }
 })();
