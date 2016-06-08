@@ -9,9 +9,9 @@
 
         <!-- Art Images -->
         <div class="col-sm-9">
-          <h1 class="text-center"></h1>
-
-          <img class="img-responsive" ng-src="{{vm.installation.photos[0].url}}" alt="mural" style="width:80%;">
+          <div class="text-center">
+            <img class="" ng-src="{{vm.installation.photos[0].url}}" alt="mural" style="max-width:80%; max-height: 600px">
+          </div>
 
           <!-- other perspective images -->
           <div class="row">
@@ -36,7 +36,9 @@
           <!-- Artist Name -->
           <div ng-show="vm.artist.name">
             <h3 class="text-uppercase">Artist</h3>
-            <i class="fa fa-user" aria-hidden="true"></i>
+            <span class="user-icon-bg">
+                <i class="fa fa-user"></i>
+            </span>
             <span ng-bind="vm.artist.name"></span>
           </div>
 
@@ -49,6 +51,9 @@
           <!-- Location -->
           <div ng-show="vm.installation.address">
             <h3 class="text-uppercase">Location</h3>
+
+            <div id="map" style="height: 200px;"></div>
+            <br>
             <p>
               <span ng-bind="vm.installation.address"></span>
             </p>
@@ -57,10 +62,10 @@
           <!-- Coordinates -->
           <div ng-show="vm.installation.location">
             <h3 class="text-uppercase">Coordinates</h3>
-            <p>
+            <a ng-href="http://www.google.com/maps/place/{{vm.installation.location.latitude}},{{vm.installation.location.longitude}}" class="help-text">
               <span ng-bind="vm.installation.location.latitude"></span>,
               <span ng-bind="vm.installation.location.longitude"></span>
-            </p>
+            </a>
           </div>
 
 
