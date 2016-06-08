@@ -3,47 +3,41 @@
 
   angular
     .module('utils.codehangar')
-    .controller('RethinkCtrl', controller);
+    .controller('ArtInstallationCtrl', controller);
 
-  controller.$inject = ['$timeout', '$http'];
+  controller.$inject = ['$timeout', '$http', 'ArtService', 'ArtistService', '$stateParams'];
 
-  function controller($timeout, $http) {
+  function controller($timeout, $http, ArtService, ArtistService, $stateParams) {
 
     var vm = this;
 
-    vm.download = function(downloadForm) {
-      downloadForm.$setDirty();
-
-      console.log("downloadForm.$valid", downloadForm.$valid)
-      if (downloadForm.$valid) {
-        analytics.alias(vm.downloadEmail, {}, {}, function() {
-          analytics.identify(vm.downloadEmail, {
-            email: vm.downloadEmail
-          });
-
-          analytics.track('clicked download ReQLPro', {
-            "downloadCTA": vm.downloadCTA,
-            "downloadEmail": vm.downloadEmail
-          });
+    vm.getArtist = function(id) {
+      ArtistService.getArtist(id)
+        .success(function(data) {
+          vm.artist = data;
+          console.log("vm.artist", vm.artist)
         })
-
-        $http.post('https://contact-form-api.herokuapp.com/api/v1/contact/reqlpro', {
-          email: vm.downloadEmail
-        }).then(function(res) {
-          console.log("res", res)
-
-          $timeout(function() {
-            vm.showDownloadSuccess = true;
-            console.log("vm.showDownloadSuccess", vm.showDownloadSuccess)
-          });
-        }).catch(function(err) {
-          console.log("err", err)
+        .error(function(err) {
+          console.error("err", err)
         });
-      }
+    }
+
+    vm.getInstallation = function(id) {
+      ArtService.getInstallation(id)
+        .success(function(data) {
+          vm.installation = data;
+          console.log("vm.installation", vm.installation)
+          vm.getArtist(vm.installation.creator.objectId);
+        })
+        .error(function(err) {
+          console.error("err", err)
+        });
     };
 
     vm.init = function() {
-      vm.downloadCTA = 'Get the Beta';
+      if ($stateParams.id) {
+        vm.getInstallation($stateParams.id);
+      }
     };
 
     vm.init();

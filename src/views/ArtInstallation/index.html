@@ -2,71 +2,61 @@
 <div ng-include="'components/Header-Utils/index.html'"></div>
 
 <div class="container-fluid reql-container">
-    <div class="row" style="margin:60px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9">
-                    <h1 class="text-center"><img class="img-responsive" src="images/Boy-Kong-Mural.jpg" alt="mural" style="width:80%;"></h1>
-<!-- other perspective images -->
-<div class="row">
-    <div class="col-sm-9">
-        <h3 class="text-uppercase">More Perspectives</h3>
-        <img "img-responsive center-block" src="images/" alt="responsive image" />
-        <img "img-responsive center-block" src="images/" alt="responsive image" />
-        <img "img-responsive center-block" src="images/" alt="responsive image" />
-        <img "img-responsive center-block" src="images/" alt="responsive image" />
-        <img "img-responsive center-block" src="images/" alt="responsive image" />
-        <img "img-responsive center-block" src="images/" alt="responsive image" />
-        <img "img-responsive center-block" src="images/" alt="responsive image" />
-        <img "img-responsive center-block" src="images/" alt="responsive image" />
-    </div>
+  <div class="row" style="margin:60px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <h1 class="text-center"></h1>
 
-</div>
-                </div>
-                <div class="col-sm-3">
-                    <h2>Title of Art</h2>
-                    <hr />
-                    <p>Short Location</p>
-                    <h3 class="text-uppercase">Artist</h3>
-                    <p>
-                        <span><i class="fa fa-user" aria-hidden="true"></i></span>
-                        Artist's Name
-                    </p>
-                    <!-- Tags -->
-                    <div>
-                        <h3 class="text-uppercase">Tags</h3>
-                        <a>Tag 1</a>
-                        <a>Tag 2</a>
-                        <a>Tag 3</a>
-                    </div>
-                    <!-- Location -->
-                    <div>
-                        <h3 class="text-uppercase">Location</h3>
-                        <p>
-                            Location Name
-                        </p>
-                        <p>
-                            Street Address
-                        </p>
-                        <p>
-                            City, FL. Zip
-                        </p>
-                    </div>
-                    <h3 class="text-uppercase">Coordinates</h3>
-                    <p>
-                        <span>Lat </span><span>/ Long</span>
-                    </p>
-                    <h3 class="text-uppercase">On Display</h3>
-                    <p>
-                        <span>beginning date </span><span>- end date</span>
-                    </p>
-                </div>
+          <img class="img-responsive" ng-src="{{vm.installation.photos[0].url}}" alt="mural" style="width:80%;">
 
+          <!-- other perspective images -->
+          <div class="row">
+            <div class="col-sm-9">
+              <h3 class="text-uppercase">More Perspectives</h3>
 
-
+              <img class="thumbnail" ng-repeat="photo in vm.installation.photos" ng-src="{{photo.url}}" />
             </div>
+
+          </div>
         </div>
+        <div class="col-sm-3">
+          <h2>Title of Art</h2>
+          <hr />
+          <p>Short Location</p>
+          <h3 class="text-uppercase">Artist</h3>
+          <p>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span ng-bind="vm.artist.name"></span>
+          </p>
+          <!-- Tags -->
+          <div>
+            <h3 class="text-uppercase">Tags</h3>
+            <span ng-repeat="tag in vm.installation.tags" class="badge tags" ng-bind="tag"></span>
+          </div>
+          <!-- Location -->
+          <div>
+            <h3 class="text-uppercase">Location</h3>
+            <p>
+              <span ng-bind="vm.installation.address"></span>
+            </p>
+          </div>
+          <h3 class="text-uppercase">Coordinates</h3>
+          <p>
+            <span>Lat: {{vm.installation.location.latitude}}</span>
+            <br>
+            <span>Long: {{vm.installation.location.longitude}}</span>
+          </p>
+          <h3 class="text-uppercase">On Display</h3>
+          <p>
+            <span>beginning date </span><span>- end date</span>
+          </p>
+        </div>
+
+
+      </div>
     </div>
+  </div>
 </div>
 
 
